@@ -1,0 +1,78 @@
+.title h1{
+    display: flex;
+    justify-content: center;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border-radius: 0px 0px 50px 50px;
+    font-size: 60px;
+    animation: title 2s ease-in-out;
+}
+
+@keyframes title{
+    from{
+    transform: translateY(-72px);
+    opacity: 0;
+}
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border-radius: 50px;
+    width: 460px;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+.formDiv{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: x-large;
+    align-items: center;
+    padding: 5px;
+}
+
+.formDivBtn{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.formDivBtn button{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 15px;
+    box-shadow: 0 0 0 0 black;
+    animation: pulse 1.4s infinite;
+    background-color: rgb(214, 211, 211);
+    color: black;
+    border: none;
+    outline: none;
+}
+
+@keyframes pulse{
+    to{
+        box-shadow: 0 0 0 10px rgba($color: black, $alpha: 0.2);
+    }
+}
+
+#inputName{
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}

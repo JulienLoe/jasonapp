@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Syne Mono', monospace;
+}
+
+#root{
+    height: 100vh;
+    background-color: adjust-color($color: #9b3838, $alpha: 1.0);
+}
+
+.App{
+    // background-image: url('/navire.jpg');
+    background-color: adjust-color($color: #9b3838, $alpha: 1.0);
+    background-size: cover;
+    height: auto;
+}
+
