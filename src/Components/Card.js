@@ -15,7 +15,7 @@ const Card = ({getData, setName, setAdjective, data, setId, handleEdit, handleEd
     const handleClick = async (e, id) =>{
         e.preventDefault();
         if(id!==undefined){
-          const result = await axios.delete(`http://localhost:8080/${id}`)
+          const result = await axios.delete(`https://jason-api-y9ew.onrender.com/${id}`)
           console.log(result)
           if(result.status===200){
             toast.error('Deleted member !')

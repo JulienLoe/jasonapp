@@ -21,7 +21,7 @@ function App() {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     const member = {name, adjective};
-    const result = await axios.post('http://localhost:8080/create', member)
+    const result = await axios.post('https://jason-api-y9ew.onrender.com/create', member)
     console.log(result)
     if(result.status===200){
       toast.success('Member created !')
@@ -38,7 +38,7 @@ function App() {
   const handleEdit = async (e) =>{
     e.preventDefault();
     const member = {name, adjective}
-    const result = await axios.put(`http://localhost:8080/${id}`, member)
+    const result = await axios.put(`https://jason-api-y9ew.onrender.com/${id}`, member)
     if(result.status===200){
       toast.success("Modified member !")
       handleEditClose();
@@ -49,7 +49,7 @@ function App() {
 }
 
    const getData = async ()=>{
-       const result = await axios.get('http://localhost:8080/');
+       const result = await axios.get('https://jason-api-y9ew.onrender.com/');
        if(result.status===200){
        setData(result.data);
        console.log(result);
