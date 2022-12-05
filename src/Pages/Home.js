@@ -3,7 +3,7 @@
 import InputSearch from "../Components/InputSearch";
 import Card from '../Components/Card';
 
-const Home = ({ getData, setName, setAdjective, data, setId, inputRefName, inputRefAdjective, handleClick, handleEdit, handleEditClose, viewEdit, setEditShow, handleSubmit, viewConfirm, handleConfirmClose, setConfirmShow}) => {
+const Home = ({ getData, setName, setAdjective, data, setId, inputRefName, inputRefAdjective, handleEdit, handleEditClose, viewEdit, setEditShow, handleSubmit}) => {
     return (
     <div>
         <InputSearch
@@ -19,14 +19,10 @@ const Home = ({ getData, setName, setAdjective, data, setId, inputRefName, input
         setAdjective={setAdjective} 
         data={data}  
         setId={setId}
-        handleClick={handleClick}
         handleEdit={handleEdit}
         handleEditClose={handleEditClose}
         viewEdit={viewEdit}
         setEditShow={setEditShow}
-        viewConfirm={viewConfirm}
-        handleConfirmClose={handleConfirmClose}
-        setConfirmShow={setConfirmShow}
          />
     </div>
     );

@@ -20,40 +20,42 @@ function App() {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
+    if(name.length !== 0 || adjective.length !== 0){
     const member = {name, adjective};
     const result = await axios.post('https://jason-api-y9ew.onrender.com/create', member)
     console.log(result)
-    if(result.status===200){
+    try{if(result.status===200){
       toast.success('Member created !')
       getData();
       console.log(id);
       inputRefName.current.value = '';
       inputRefAdjective.current.value = '';
-    }
-    else{
-        console.log(Error);
-    }
+    }}
+    catch(error){console.error(error)}
+  }
 }
 
   const handleEdit = async (e) =>{
     e.preventDefault();
     const member = {name, adjective}
     const result = await axios.put(`https://jason-api-y9ew.onrender.com/${id}`, member)
-    if(result.status===200){
+    try{if(result.status===200){
       toast.success("Modified member !")
       handleEditClose();
       getData();
       console.log(id);
-    }
+    }}
+    catch(error){console.error(error)}
     
 }
 
    const getData = async ()=>{
        const result = await axios.get('https://jason-api-y9ew.onrender.com/');
-       if(result.status===200){
+       try{if(result.status===200){
        setData(result.data);
        console.log(result);
-       }
+       }}
+       catch(error){console.error(error)}
      }
 
 

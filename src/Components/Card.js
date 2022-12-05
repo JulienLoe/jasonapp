@@ -17,13 +17,15 @@ const Card = ({getData, setName, setAdjective, data, setId, handleEdit, handleEd
         if(id!==undefined){
           const result = await axios.delete(`https://jason-api-y9ew.onrender.com/${id}`)
           console.log(result)
-          if(result.status===200){
+          try{if(result.status===200){
             toast.error('Deleted member !')
               handleConfirmClose();
                getData();
                console.log(id);
               
           }
+        }
+        catch(error){console.error(error)}
         }
       }
     
@@ -55,7 +57,7 @@ const Card = ({getData, setName, setAdjective, data, setId, handleEdit, handleEd
                         <Modal.Title>Modal heading</Modal.Title>
                             </Modal.Header>
                                 <Modal.Body>{message}</Modal.Body>
-        <                               Modal.Footer>
+                                        <Modal.Footer>
                                         <Button variant="primary" onClick={handleConfirmClose}>CLOSE</Button>
                                         <Button variant="danger" onClick={(e)=>handleClick(e,elements._id)}>DELETE</Button> 
                                         </Modal.Footer>
